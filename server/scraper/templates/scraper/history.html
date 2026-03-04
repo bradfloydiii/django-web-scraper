@@ -1,0 +1,14 @@
+{% extends "scraper/base.html" %}
+{% block content %}
+  <h2>History</h2>
+  <ul>
+    {% for s in searches %}
+      <li class="history-link">
+        <a href="{% url 'search_detail' s.id %}">{{ s.url }}</a>
+        <div class="muted">{{ s.created_at }} • {{ s.image_count }} images</div>
+      </li>
+    {% empty %}
+      <li>No searches yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

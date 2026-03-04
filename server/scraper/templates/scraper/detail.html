@@ -1,0 +1,22 @@
+{% extends "scraper/base.html" %}
+{% block content %}
+  <h2>Search #{{ search.id }}</h2>
+  <div class="detail-link">
+    <a href="{{ search.url }}" target="_blank" rel="noreferrer">{{ search.url }}</a>
+  </div>
+
+  {% if search.images.all %}
+    <div class="grid">
+      {% for img in search.images.all %}
+        <a href="{{ img.source_url }}" target="_blank" rel="noreferrer" style="color: inherit;">
+          <div class="card">
+            <img src="{{ img.file.url }}" alt="{{ img.source_url }}" loading="lazy" />
+            <div class="muted">{{ img.source_url }}</div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No images found.</p>
+  {% endif %}
+{% endblock %}

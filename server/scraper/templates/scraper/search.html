@@ -1,0 +1,9 @@
+{% extends "scraper/base.html" %}
+{% block content %}
+  <h2>Search</h2>
+  <form method="post" class="search-form">
+    {% csrf_token %}
+    <div style="flex:1;">{{ form.url }}</div>
+    <button type="submit" class="submit-btn">Go</button>
+  </form>
+{% endblock %}
