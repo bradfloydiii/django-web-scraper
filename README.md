@@ -1,10 +1,3 @@
-# brad-floyd-engineer-interview
-Hello Brad,
-
-I hope you’re doing well and we’re looking forward to talking with you next week.
-
-For the presentation portion of your interview we’d like you to complete and present on the following task. 
-
 ## The Problem
 
 Create a web application capable of downloading and displaying all of the images found at a URL. In the provided repository, please create a relational database-backed web application capable of:
@@ -39,6 +32,8 @@ Your audience is a group of Web software developers and user experience designer
 <br>
 
 ## Running Image Scraper (Django + Postgres)
+
+Note - you will need to install Docker Desktop
 
 ```bash
 cp .env.example .env
